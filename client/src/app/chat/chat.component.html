@@ -1,0 +1,5 @@
+<input type="text" [(ngModel)]="inputVal">
+<button class="btn btn-secondary" (click)="send()">send</button>
+<div class="container">
+    <p *ngFor="let message of messages">{{message}}</p>
+</div>

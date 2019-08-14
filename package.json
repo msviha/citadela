@@ -1,0 +1,15 @@
+{
+  "name": "citadela",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "npm run start --prefix ./client",
+    "server": "npm run start --prefix ./server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/cli": "^8.2.1"
+  }
+}
