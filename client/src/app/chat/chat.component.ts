@@ -3,8 +3,7 @@ import * as Colyseus from 'colyseus.js';
 
 @Component({
   selector: 'app-chat',
-  templateUrl: './chat.component.html',
-  styleUrls: ['./chat.component.sass']
+  templateUrl: './chat.component.html'
 })
 export class ChatComponent implements OnInit {
 

@@ -1,4 +1,42 @@
-<div class="container">
-    <button class="btn btn-primary" routerLink="/">home</button>
-    <button class="btn btn-primary" routerLink="/chat">chat</button>
-</div>
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color" [containerInside]="false">
+
+        <!-- Navbar brand -->
+        <mdb-navbar-brand><a class="navbar-brand" href="#"><mdb-icon fab icon="fort-awesome"></mdb-icon> Citadela</a></mdb-navbar-brand>
+      
+        <!-- Collapsible content -->
+        <links>
+      
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link waves-light" routerLink="/" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-light" routerLink="/chat" mdbWavesEffect>Chat</a>
+            </li>
+     
+          </ul>
+          <!-- Links -->
+      
+          <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item">
+              <a class="nav-link">
+                  <div class="btn-group" mdbDropdown>
+                      <mdb-icon fas icon="hand-middle-finger" mdbDropdownToggle></mdb-icon>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-primary">
+                        <a class="dropdown-item" href="#">deset</a>
+                        <a class="dropdown-item" href="#">dvacet</a>
+                        <a class="dropdown-item" href="#">tricet</a>
+                        <div class="divider dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">$jQuery</a>
+                      </div>
+                    </div>
+              </a>
+            </li>
+          </ul>
+        </links>
+        <!-- Collapsible content -->
+      
+      </mdb-navbar>
+      <!--/.Navbar-->
