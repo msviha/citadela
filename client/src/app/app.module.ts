@@ -7,20 +7,37 @@ import { AppComponent } from './app.component';
 import { ChatComponent } from './chat/chat.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { PlayerComponent } from './player/player.component';
+import { GameComponent } from './game/game.component';
+import { BoardComponent } from './board/board.component';
+import { HeroComponent } from './player/hero/hero.component';
+import { BuildingsComponent } from './player/buildings/buildings.component';
+import { HandComponent } from './player/hand/hand.component';
+import { OverviewComponent } from './player/overview/overview.component';
+import { SeatComponent } from './game/seat/seat.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChatComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    PlayerComponent,
+    GameComponent,
+    BoardComponent,
+    HeroComponent,
+    BuildingsComponent,
+    HandComponent,
+    OverviewComponent,
+    SeatComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

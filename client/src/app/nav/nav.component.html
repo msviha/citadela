@@ -1,42 +1,30 @@
-<!--Navbar-->
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color" [containerInside]="false">
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-light grey lighten-5" [containerInside]="false">
 
-        <!-- Navbar brand -->
-        <mdb-navbar-brand><a class="navbar-brand" href="#"><mdb-icon fab icon="fort-awesome"></mdb-icon> Citadela</a></mdb-navbar-brand>
-      
-        <!-- Collapsible content -->
-        <links>
-      
-          <!-- Links -->
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link waves-light" routerLink="/" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link waves-light" routerLink="/chat" mdbWavesEffect>Chat</a>
-            </li>
-     
-          </ul>
-          <!-- Links -->
-      
-          <ul class="navbar-nav ml-auto nav-flex-icons">
-            <li class="nav-item">
-              <a class="nav-link">
-                  <div class="btn-group" mdbDropdown>
-                      <mdb-icon fas icon="hand-middle-finger" mdbDropdownToggle></mdb-icon>
-                      <div class="dropdown-menu dropdown-menu-right dropdown-primary">
-                        <a class="dropdown-item" href="#">deset</a>
-                        <a class="dropdown-item" href="#">dvacet</a>
-                        <a class="dropdown-item" href="#">tricet</a>
-                        <div class="divider dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">$jQuery</a>
-                      </div>
-                    </div>
-              </a>
-            </li>
-          </ul>
-        </links>
-        <!-- Collapsible content -->
-      
-      </mdb-navbar>
-      <!--/.Navbar-->
+  <mdb-navbar-brand>
+    <span>
+      <a class="navbar-brand" href="#"><mdb-icon fab icon="fort-awesome fa-lg"></mdb-icon> Citadela</a>
+    </span>
+  </mdb-navbar-brand>
+
+  <form [style.display]="connected ? 'none' : undefined" class="form-inline waves-light"
+        mdbWavesEffect
+        [formGroup]="form">
+    <div class="md-form my-0">
+      <input class="form-control"
+             mdbInput
+             mdbValidate
+             type="text"
+             placeholder="Player Name"
+             formControlName="name">
+    </div>
+    <div class="md-form my-0">
+      <input class="form-control"
+             mdbValidate
+             type="text"
+             placeholder="Server IP"
+             formControlName="ip">
+    </div>
+    <button [disabled]="!form.valid" mdbBtn color="light" class="my-0 waves-light" type="submit" (click)="onSubmit()" mdbWavesEffect>Connect</button>
+  </form>
+
+</mdb-navbar>

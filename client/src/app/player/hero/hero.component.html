@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <mdb-card>
+        <mdb-card-img src="assets/hero-1-mordyrka.jpg" alt="Card image cap"></mdb-card-img>
+      </mdb-card>
+    </div>
+    <div class="col-md-6">
+      <ng-template #popTemplate><em>Tooltip</em> <u>with</u> <b>HTML</b></ng-template>
+      <button mdbBtn type="button" color="blue-grey" [mdbTooltip]="popTemplate" class="waves-light btn-block" mdbWavesEffect>Ability 1</button>
+      <button mdbBtn type="button" color="blue-grey" data-toggle="tooltip" class="waves-light btn-block" mdbWavesEffect>Ability 2</button>
+    </div>
+  </div>
+</div>

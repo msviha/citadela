@@ -1,0 +1,14 @@
+<app-player *ngIf="gameService.seats[index].player; else emptySeat"
+            [player]="gameService.seats[index].player"></app-player>
+
+<ng-template #emptySeat>
+  <mdb-card>
+    <button *ngIf="!gameService.started && !gameService.seats[index].player"
+            block="true"
+            mdbBtn
+            mdbWavesEffect
+            type="button"
+            (click)="takeSeat()"
+            color="light">Take Empty seat !</button>
+  </mdb-card>
+</ng-template>

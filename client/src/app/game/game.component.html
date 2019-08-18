@@ -1,0 +1,30 @@
+<div class="container-fluid" *ngIf="gameService.playerConnected">
+  <div class="row">
+    <div class="col-md-4">
+      <app-seat [index]="0"></app-seat>
+    </div>
+    <div class="col-md-4">
+      <app-seat [index]="1"></app-seat>
+    </div>
+    <div class="col-md-4">
+      <app-seat [index]="2"></app-seat>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <app-board></app-board>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <app-seat [index]="5"></app-seat>
+    </div>
+    <div class="col-md-4">
+      <app-seat [index]="4"></app-seat>
+    </div>
+    <div class="col-md-4">
+      <app-seat [index]="3"></app-seat>
+    </div>
+  </div>
+</div>
+

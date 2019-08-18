@@ -1,0 +1,12 @@
+<mdb-card>
+  <mdb-card-body>
+    <mdb-card-title>
+      <app-overview [playerName]="playerName"></app-overview>
+    </mdb-card-title>
+
+
+    <app-hero [style.display]="playerService.indicators[1].active ? 'block' : 'none'"></app-hero>
+    <app-buildings [style.display]="playerService.indicators[2].active ? 'block' : 'none'"></app-buildings>
+    <app-hand [style.display]="playerService.indicators[3].active ? 'block' : 'none'"></app-hand>
+  </mdb-card-body>
+</mdb-card>

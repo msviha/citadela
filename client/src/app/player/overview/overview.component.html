@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="row">
+    <h4>{{ playerName }}</h4>
+  </div>
+  <div class="row stats">
+    <div *ngFor="let indicator of playerService.indicators"
+         class="col-md-2 text-center font-weight-bolder indicator"
+         (click)="itemClick(indicator)">
+      <span [mdbTooltip]="indicator.tooltip">
+        <div>
+          <span class="fa-stack">
+            <i [class]="(indicator.active ? 'fas ': 'far ') + indicator.bgIconClass"></i>
+            <i *ngIf="indicator.show" [class]="indicator.iconClass"></i>
+          </span>
+        </div>
+        <div>
+          <span>{{ indicator.displayValue }}</span>
+        </div>
+      </span>
+    </div>
+  </div>
+</div>
