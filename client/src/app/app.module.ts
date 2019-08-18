@@ -8,13 +8,17 @@ import { ChatComponent } from './chat/chat.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import { BoardComponent } from './home/board/board.component';
+import { PlayerComponent } from './home/player/player.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChatComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    BoardComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,
