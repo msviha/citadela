@@ -1,28 +1,26 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { MDBBootstrapModule} from 'angular-bootstrap-md'
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {MDBBootstrapModule} from 'angular-bootstrap-md';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { ChatComponent } from './chat/chat.component';
-import { NavComponent } from './nav/nav.component';
-import { HomeComponent } from './home/home.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { PlayerComponent } from './player/player.component';
-import { GameComponent } from './game/game.component';
-import { BoardComponent } from './board/board.component';
-import { HeroComponent } from './player/hero/hero.component';
-import { BuildingsComponent } from './player/buildings/buildings.component';
-import { HandComponent } from './player/hand/hand.component';
-import { OverviewComponent } from './player/overview/overview.component';
-import { SeatComponent } from './game/seat/seat.component';
+import {GameComponent} from './game/game.component';
+import {SeatComponent} from './game/seat/seat.component';
+import {NavComponent} from './game/nav/nav.component';
+import {BoardComponent} from './game/board/board.component';
+import {PlayerComponent} from './game/player/player.component';
+import {HeroComponent} from './game/player/hero/hero.component';
+import {BuildingsComponent} from './game/player/buildings/buildings.component';
+import {HandComponent} from './game/player/hand/hand.component';
+import {OverviewComponent} from './game/player/overview/overview.component';
+import { PickComponent } from './game/pick/pick.component';
+import { DraftComponent } from './game/draft/draft.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChatComponent,
     NavComponent,
-    HomeComponent,
     PlayerComponent,
     GameComponent,
     BoardComponent,
@@ -30,7 +28,9 @@ import { SeatComponent } from './game/seat/seat.component';
     BuildingsComponent,
     HandComponent,
     OverviewComponent,
-    SeatComponent
+    SeatComponent,
+    PickComponent,
+    DraftComponent
   ],
   imports: [
     BrowserModule,
@@ -42,4 +42,4 @@ import { SeatComponent } from './game/seat/seat.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

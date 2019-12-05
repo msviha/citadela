@@ -1,0 +1,7 @@
+<div class="row" *ngIf="positionToPick <= 9">
+    <div class="col-md-4 card-wrapper" *ngFor="let char of cards">
+        <mdb-card>
+            <mdb-card-img [src]="characters[char].picturePath" (click)="pick(char)" alt="Card image cap"></mdb-card-img>
+        </mdb-card>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-<div class="container-fluid" *ngIf="gameService.playerConnected">
+<div class="container-fluid" *ngIf="gameService.joined && gameService.phase !== Phase.pick">
   <div class="row">
     <div class="col-md-4">
       <app-seat [index]="0"></app-seat>
@@ -26,5 +26,8 @@
       <app-seat [index]="3"></app-seat>
     </div>
   </div>
+</div>
+<div class="container-fluid" *ngIf="gameService.phase === Phase.draft">
+  <app-draft></app-draft>
 </div>
 

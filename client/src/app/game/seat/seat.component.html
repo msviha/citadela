@@ -1,9 +1,9 @@
-<app-player *ngIf="gameService.seats[index].player; else emptySeat"
-            [player]="gameService.seats[index].player"></app-player>
+<app-player *ngIf="gameService.seats[index]; else emptySeat"
+            [player]="gameService.seats[index]"></app-player>
 
 <ng-template #emptySeat>
   <mdb-card>
-    <button *ngIf="!gameService.started && !gameService.seats[index].player"
+    <button *ngIf="!gameService.seats[index]"
             block="true"
             mdbBtn
             mdbWavesEffect

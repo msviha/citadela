@@ -6,7 +6,7 @@ import { Server } from 'colyseus';
 import { monitor } from '@colyseus/monitor';
 
 // Import demo room handlers
-import { ChatRoom } from "./src/chat";
+import { CitadelaRoom } from "./src/citadela";
 
 const port = Number(process.env.PORT || 4201);
 const app = express();
@@ -16,12 +16,12 @@ const gameServer = new Server({
   server: createServer(app)
 });
 
-// Register ChatRoom as "chat"
-gameServer.register("chat", ChatRoom);
+// Register CitadelaRoom as "chat"
+gameServer.register("citadela", CitadelaRoom);
 
-// Register ChatRoom with initial options, as "chat_with_options"
+// Register CitadelaRoom with initial options, as "chat_with_options"
 // onInit(options) will receive client join options + options registered here.
-gameServer.register("chat_with_options", ChatRoom, {
+gameServer.register("chat_with_options", CitadelaRoom, {
     custom_options: "you can use me on Room#onInit"
 });
 
